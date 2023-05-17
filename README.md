@@ -1,9 +1,11 @@
 # Exploratory Data Analysis of Health Data
-![](display_image.JPEG)
+![](display_image.jpeg)
 
 There are two datasets used for this analysis, they were provided by [Turing](https://turing.com). The datasets consist of health data of several correspondents. The datasets are:
-Cardio_base.csv consist: 70000 rows, 9 columns
-Cardio_alco.csv consist: 56903 rows, 2 columns
+
+[cardio_base.csv](cardio_base.csv) consist: 70000 rows, 9 columns.
+
+[cardio_alco.cs](cardio_alco.csv) consist: 56903 rows, 2 columns.
 ## Data Description
 •	Objective: factual information
 •	Examination: result from medical examination
@@ -26,22 +28,23 @@ Formula used: cardio_df["age"] = (cardio_df["age"]/ 365.25).astype(int)
 -	First, divide every row within the `age` column by 362.25 to convert days to years.
 -	`.astype(int)` rounds down the ages to the nearest whole number.
 ## Handling the Outliers
-![](outliers.PNG)
+![](outliers.png)
 * There are a number of extreme values (outliers) here, most of which are abnormal blood pressure as humans.
 * having `ap_lo` and `ap_hi` levels lower than 0 and as high as 10,000.
 > Diastolic blood pressure `ap_lo` exerts within arteries between heartbeats. Normal diastolic blood pressure is 80 mmHg or below. If you have high blood pressure, the diastolic number is often higher even during rest. Diastolic blood pressure is considered dangerously low when it is 60 mmHg or lower and dangerously high when it is 110 mmHg or over. Reference: [verywell_health](https://www.verywellhealth.com/systolic-and-diastolic-blood-pressure-1746075)
 
 > Systolic blood pressure `ap_hi` exerts when blood is ejected into arteries. Normal systolic blood pressure is 120 mmHg or below. `ap_hi` below 90 mmHg is considered low and may require intervention and management from your healthcare provider. If you get `ap_hi` readings above 180 mmHg, it is considered dangerously high and should be addressed by your healthcare provider. Reference: [verywell health](https://www.verywellhealth.com/systolic-and-diastolic-blood-pressure-1746075)
-![](vwh.JPG)
+![](vwh.jpg)
 
 ## Business Questions
+To view the details of the analysis, click [here](Health_Data_Analysis.ipynb)
 1.	How much heavier is the age group with the highest average weight than the age group with the lowest weight?
 2.	Are men more likely to be a smoker than women are?
 3.	How tall are the tallest 1% of people?
 4.	What is the percentage of people above 50 that consume alcohol?
 5.	Which of the following statements is true with 95% confidence?
-a.	smokers have higher blood pressure than `non_smokers`
-b.	smokers have higher cholesterol level than `non smokers`
+*	smokers have higher blood pressure than `non_smokers`
+*	smokers have higher cholesterol level than `non smokers`
 
 ## Summary
 Key findings from the exploratory analysis. The following information were derived from the dataset
