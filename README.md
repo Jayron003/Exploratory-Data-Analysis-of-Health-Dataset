@@ -1,7 +1,7 @@
 # Exploratory Data Analysis of Health Data
 ![](display_image.jpeg)
 
-There are two datasets used for this analysis, they were provided by [Turing](https://turing.com). The datasets consist of health data of several correspondents. The datasets are:
+There are two datasets used for this analysis, they were provided by [Turing](https://turing.com). The datasets consist of health data of several patients and their correspondin attributes like; age, weight, height, cholesterol level e.t.c. The datasets are:
 
 [cardio_base.csv](cardio_base.csv) consist: 70000 rows, 9 columns.
 
@@ -27,6 +27,8 @@ I had to convert days to year and rounded down.
 Formula used: cardio_df["age"] = (cardio_df["age"]/ 365.25).astype(int)
 -	First, divide every row within the `age` column by 362.25 to convert days to years.
 -	`.astype(int)` rounds down the ages to the nearest whole number.
+
+The `cardio_base` dataset and `cardio_alco` dataset were merged on `id` using inner join
 ## Handling the Outliers
 ![](outliers.png)
 * There are a number of extreme values (outliers) here, most of which are abnormal blood pressure as humans.
